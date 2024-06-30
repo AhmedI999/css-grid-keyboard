@@ -1,0 +1,128 @@
+/*  GENERAL/REUSABLE CLASSES */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    font-family: "Rubik", sans-serif;
+    font-size: 2rem;
+    line-height: 1;
+    font-weight: 400;
+}
+
+.keyboard{
+    width: 125rem;
+    padding: 2.4rem;
+    background-color: #ccc;
+    border-radius: 15px;
+    margin: 20rem auto;
+
+    display: grid;
+    grid-template-columns: repeat(15, 1fr);
+    column-gap: 0.5rem;
+    row-gap: 0.7rem;
+
+    place-content: center;
+}
+.mg-left-fix-50 {
+    transform: translate(-50%, 0);
+}
+.mg-left-fix-55 {
+    transform: translate(-55%, 0);
+}
+.key:link, .key:visited {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 6px;
+    border: solid 3px #495057;
+    color: #212529;
+    width: 7.4rem;
+    height: 7.4rem;
+
+    background-color: #f1f3f5;
+    font-size: 2rem;
+    font-weight: 400;
+    padding: 1.6rem;
+    text-decoration: none;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+.key:hover, .key:active {
+    background-color: #adb5bd;
+}
+
+/* DIFFERENT SIZED BTNS */
+/* FIRST ROW */
+.btn-del:link, .btn-del:visited {
+    grid-column: span 2;
+    width: 100%;
+}
+
+/* SECOND ROW */
+.btn-tab:link, .btn-tab:visited {
+    grid-column: span 2;
+    width: 75%;
+}
+
+.btn-back-slash:link, .btn-back-slash:visited {
+    width: 150%;
+    justify-self: right;
+}
+
+/* THIRD ROW */
+.btn-caps:link, .btn-cancel:visited {
+    grid-column: span 2;
+    width: 100%;
+}
+
+.btn-return:link, .btn-return:visited {
+    grid-column: span 2;
+    width: 100%;
+}
+
+/* FOURTH ROW */
+.btn-shift-left:link, .btn-shift-left:visited {
+    grid-column: span 3;
+    width: 82%;
+}
+.btn-shift-right:link, .btn-shift-right:visited {
+    grid-column: 14 / 16;
+    justify-self: right;
+    width: 127%;
+}
+
+/* FIFTH ROW */
+
+.btn-ctrl-left:link, .btn-ctrl-left:visited {
+    grid-column: span 2;
+    width: 75%;
+}
+.btn-alt-left:link, .btn-alt-left:visited {
+    transform: translate(-53%, 0);
+}
+.btn-command-left:link, .btn-command-left:visited {
+    grid-column: span 2;
+    width: 75%;
+    justify-self: left;
+    transform: translate(-35%, 0);
+}
+/** Before space **/
+.btn-space:link, .btn-space:visited {
+    grid-column: span 5;
+    width: 130%;
+    justify-self: left;
+    transform: translate(-15.5%, 0);
+}
+/* After space key */
+.btn-command-right:link, .btn-command-right:visited {
+    grid-column: span 2;
+    width: 75%;
+    justify-self: right;
+}
